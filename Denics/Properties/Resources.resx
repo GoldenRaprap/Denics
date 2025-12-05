@@ -136,17 +136,14 @@
   <data name="IconMoney" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconMoney.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LongBG_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LongBG_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="AdminButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AdminButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bg_img_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bg_img_4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="GoogleMaps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GoogleMaps1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Service - Tooth Extraction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Service - Tooth Extraction.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Braces _ Orthodontic Treatment" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Braces _ Orthodontic Treatment.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,8 +175,8 @@
   <data name="bg_img_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bg_img_6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Service - Tooth Extraction" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Service - Tooth Extraction.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="IconBell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon - Bell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Service - Braces _ Orthodontic Treatment" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Service - Braces _ Orthodontic Treatment.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,8 +187,14 @@
   <data name="Service - Root Canal Treatment" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Service - Root Canal Treatment.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="LongBG_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LongBG_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="LongBG_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LongBG_4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Setting_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Setting_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IconWhiteHome" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon - white home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,23 +202,26 @@
   <data name="Logo (no bg) -Denics" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo (no bg) -Denics.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IconDoctor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icon - doctor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Service - Emergency Dental Care" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Service - Emergency Dental Care.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LongBG_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LongBG_7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IconBell" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icon - Bell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LongBG_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LongBG_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IconLogout" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon - logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LongBG_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\Website Images\Background Images\Long BG\LongBG_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="IconBook" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon - Book.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Iconcalendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon - calendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dct1 - Ana Reyes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dct1 - Ana Reyes.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Service - Routine Check-Up &amp; Cleaning" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Service - Routine Check-Up &amp; Cleaning.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,22 +229,19 @@
   <data name="LongBG_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LongBG_6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="GoogleMaps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GoogleMaps1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconDoctor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon - doctor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="IconReport" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon - report.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Dct1 - Ana Reyes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Dct1 - Ana Reyes.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconBook" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icon - Book.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Service - Emergency Dental Care" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Service - Emergency Dental Care.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Dct4 - Maria Dela Cruz" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dct4 - Maria Dela Cruz.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Setting_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\Website Images\Background Images\Setting_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Service - Tooth Filling" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Service - Tooth Filling.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

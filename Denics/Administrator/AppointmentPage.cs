@@ -47,7 +47,7 @@ namespace Denics.Administrator
             TabView_AppointmentTable.SelectedIndexChanged += TabView_AppointmentTable_SelectedIndexChanged;
             UpdateButtonsForCurrentTab();
         }
-
+        // kjhhgjhgjfghj
         private void AppointmentPage_Load(object sender, EventArgs e)
         {
             try

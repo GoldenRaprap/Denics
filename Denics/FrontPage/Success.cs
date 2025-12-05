@@ -1,24 +1,32 @@
 ﻿using System;
-using System.Data.SqlClient;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-
 
 namespace Denics.FrontPage
 {
-
-
-    public partial class FService : Form
+    public partial class Success : Form
     {
-        public FService()
+        public Success()
         {
             InitializeComponent();
+            Home_lbl.Click += Home_lbl_Click;
+            AboutUs_lbl.Click += AboutUs_lbl_Click;
+            Contact_lbl.Click += Contact_lbl_Click;
+            Services_lbl.Click += Services_lbl_Click;
+            Book_lbl.Click += Book_lbl_Click;
+
         }
 
-        private void FService_Load(object sender, EventArgs e)
+        private void Success_Load(object sender, EventArgs e)
         {
 
         }
-
         private void Home_lbl_Click(object sender, EventArgs e)
         {
             FHomepage fhome = new FHomepage();

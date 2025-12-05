@@ -14,9 +14,7 @@ namespace Denics.FrontPage
         private readonly string surname;
         private readonly string firstname;
         private readonly string middlename;
-        private readonly string suffix;
         private readonly string gender;
-        private readonly string hashedPassword;
         private readonly string contact;
         private readonly DateTime birthdate;
         private readonly string address;
@@ -34,9 +32,7 @@ namespace Denics.FrontPage
             string surname,
             string firstname,
             string middlename,
-            string suffix,
             string gender,
-            string hashedPassword,
             string contact,
             DateTime birthdate,
             string address)
@@ -47,9 +43,7 @@ namespace Denics.FrontPage
             this.surname = surname;
             this.firstname = firstname;
             this.middlename = middlename;
-            this.suffix = suffix;
             this.gender = gender;
-            this.hashedPassword = hashedPassword;
             this.contact = contact;
             this.birthdate = birthdate;
             this.address = address;
@@ -284,28 +278,13 @@ namespace Denics.FrontPage
                     {
                         con.Open();
 
-                        // Check duplicate again (defensive)
-                        using (var checkCmd = new SqlCommand("SELECT COUNT(*) FROM Users WHERE email = @Email OR contact = @Contact", con))
-                        {
-                            checkCmd.Parameters.AddWithValue("@Email", userEmail);
-                            checkCmd.Parameters.AddWithValue("@Contact", contact ?? string.Empty);
-                            int count = Convert.ToInt32(checkCmd.ExecuteScalar());
-                            if (count > 0)
-                            {
-                                MessageBox.Show("This email or contact already exists. Registration cancelled.", "Duplicate", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                return;
-                            }
-                        }
-
-                        using (var cmd = new SqlCommand("INSERT INTO Users (surname, firstname, middlename, suffix, gender, email, password, contact, birthdate, address) VALUES(@surname, @firstname, @middlename, @suffix, @gender, @email, @password, @contact, @birthdate, @address)", con))
+                        using (var cmd = new SqlCommand("INSERT INTO Users (surname, firstname, middlename, gender, email, contact, birthdate, address) VALUES(@surname, @firstname, @middlename, @gender, @email, @contact, @birthdate, @address)", con))
                         {
                             cmd.Parameters.AddWithValue("@surname", surname ?? string.Empty);
                             cmd.Parameters.AddWithValue("@firstname", firstname ?? string.Empty);
                             cmd.Parameters.AddWithValue("@middlename", string.IsNullOrWhiteSpace(middlename) ? (object)DBNull.Value : middlename);
-                            cmd.Parameters.AddWithValue("@suffix", string.IsNullOrWhiteSpace(suffix) ? (object)DBNull.Value : suffix);
                             cmd.Parameters.AddWithValue("@gender", string.IsNullOrWhiteSpace(gender) ? (object)DBNull.Value : gender);
                             cmd.Parameters.AddWithValue("@email", userEmail ?? string.Empty);
-                            cmd.Parameters.AddWithValue("@password", hashedPassword ?? string.Empty);
                             cmd.Parameters.AddWithValue("@contact", contact ?? string.Empty);
                             cmd.Parameters.AddWithValue("@birthdate", birthdate.Date);
                             cmd.Parameters.AddWithValue("@address", address ?? string.Empty);
@@ -319,12 +298,18 @@ namespace Denics.FrontPage
                     // Set userId to UserAccount
                     int userId = GetUserIdByEmail(userEmail);
                     Denics.UserAccount.SetUserId(userId); // set global current user id
+                    // Set other user details to database
+                    AddNewAppointment newApp = new AddNewAppointment();
+                    newApp.BookingDetailes();
+
 
 
                     // Goes to UserInterface Homepage after successful registration
-                    HomePage homepage = new HomePage();
-                    homepage.Show();
+                    Success success = new Success();
+                    success.Show();
                     this.Hide();
+                    LogInPage log = new LogInPage();
+                    log.Close();
                 }
                 catch (Exception ex)
                 {

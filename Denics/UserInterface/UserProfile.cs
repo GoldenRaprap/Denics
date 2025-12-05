@@ -80,7 +80,6 @@ namespace Denics.UserInterface
             boxFName.Text = UserAccount.GetFirstname() ?? string.Empty;
             boxLName.Text = UserAccount.GetSurname() ?? string.Empty;
             MiddleName_txtbx.Text = UserAccount.GetMiddlename() ?? string.Empty;
-            Suffix_txtbx.Text = UserAccount.GetSuffix() ?? string.Empty;
             boxNumber.Text = UserAccount.GetContactnumber() ?? string.Empty;
             Address_txtbx.Text = UserAccount.GetAddress() ?? string.Empty;
             boxEmail.Text = UserAccount.GetEmail() ?? string.Empty;
@@ -153,7 +152,6 @@ namespace Denics.UserInterface
                 !string.Equals(newFirst, UserAccount.GetFirstname() ?? string.Empty, StringComparison.Ordinal) ||
                 !string.Equals(newLast, UserAccount.GetSurname() ?? string.Empty, StringComparison.Ordinal) ||
                 !string.Equals(newMiddle, UserAccount.GetMiddlename() ?? string.Empty, StringComparison.Ordinal) ||
-                !string.Equals(newSuffix, UserAccount.GetSuffix() ?? string.Empty, StringComparison.Ordinal) ||
                 !string.Equals(newContact, UserAccount.GetContactnumber() ?? string.Empty, StringComparison.Ordinal) ||
                 !string.Equals(newAddress, UserAccount.GetAddress() ?? string.Empty, StringComparison.Ordinal) ||
                 !string.Equals(newGender ?? string.Empty, UserAccount.GetGender() ?? string.Empty, StringComparison.Ordinal);

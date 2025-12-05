@@ -1,10 +1,4 @@
-﻿/*
- * A class to remember user account information.
- * Recives user ID upon login in LogInPage and stores it.
- * Sends user ID to other forms when needed.
- */
-
-using Microsoft.VisualBasic.ApplicationServices;
+﻿using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -23,11 +17,10 @@ namespace Denics
         private static string surname;
         private static string firstname;
         private static string middlename;
-        private static string suffix;
-        private static string birthdate;      // corrected spelling and will store formatted date
+        private static string birthdate;      
         private static string gender;
         private static string email;
-        private static string contactnumber; // store contact as string (preserve leading zeros)
+        private static string contactnumber; 
         private static string address;
 
         // Set the current logged-in user
@@ -46,18 +39,17 @@ namespace Denics
         {
             _userId = null;
             // clear other details as well
-            surname = firstname = middlename = suffix = birthdate = gender = email = address = string.Empty;
+            surname = firstname = middlename = birthdate = gender = email = address = string.Empty;
             contactnumber = string.Empty;
         }
 
         // Other Information
         // contact now as string; birth (string) will contain only day/month/year formatted value
-        public static void SetUserDetails(string sur, string first, string middle, string suff, string birth, string gen, string mail, string contact, string addr)
+        public static void SetUserDetails(string sur, string first, string middle, string birth, string gen, string mail, string contact, string addr)
         {
             surname = sur;
             firstname = first;
             middlename = middle;
-            suffix = suff;
             birthdate = birth;
             gender = gen;
             email = mail;
@@ -68,7 +60,6 @@ namespace Denics
         public static string GetSurname() => surname;
         public static string GetFirstname() => firstname;
         public static string GetMiddlename() => middlename;
-        public static string GetSuffix() => suffix;
         // returns formatted birth date (day/month/year) or empty string
         public static string GetBirthdate() => birthdate;
         public static string GetGender() => gender;
@@ -80,14 +71,14 @@ namespace Denics
         // Database helper (local to methods to avoid holding connections)
         private static void SetUserInfoFromDatabase(int userId)
         {
-            // Use a local connection/command to keep the class thread-friendlier and avoid long-lived connection fields.
+            // Use a local connection/command to keep the class thread-friendlier and avoid long-lived connection fields. suffix
             try
             {
                 var db = new CallDatabase();
                 using (var con = new SqlConnection(db.getDatabaseStringName()))
                 {
                     con.Open();
-                    string query = @"SELECT surname, firstname, middlename, suffix, birthdate, gender, email, contact, address 
+                    string query = @"SELECT surname, firstname, middlename, birthdate, gender, email, contact, address 
                                      FROM Users 
                                      WHERE user_id = @UserId";
 
@@ -102,7 +93,6 @@ namespace Denics
                                 string rFirstname = reader["firstname"]?.ToString() ?? string.Empty;
                                 string rSurname = reader["surname"]?.ToString() ?? string.Empty;
                                 string rMiddlename = reader["middlename"]?.ToString() ?? string.Empty;
-                                string rSuffix = reader["suffix"]?.ToString() ?? string.Empty;
 
                                 // birthdate is stored as DATE in DB — format to day/month/year only
                                 string rBirthdate = string.Empty;
@@ -124,7 +114,7 @@ namespace Denics
                                 string rAddress = reader["address"]?.ToString() ?? string.Empty;
 
                                 // Set user details in UserAccount
-                                SetUserDetails(rSurname, rFirstname, rMiddlename, rSuffix, rBirthdate, rGender, rEmail, rContact, rAddress);
+                                SetUserDetails(rSurname, rFirstname, rMiddlename, rBirthdate, rGender, rEmail, rContact, rAddress);
                             }
                             else
                             {

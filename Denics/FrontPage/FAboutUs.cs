@@ -58,7 +58,7 @@ namespace Denics.FrontPage
 
         private void BookNow_btn_Click(object sender, EventArgs e)
         {
-            Registration register = new Registration(); 
+            LogInPage register = new LogInPage(); 
             register.Show();
             this.Hide();
         }

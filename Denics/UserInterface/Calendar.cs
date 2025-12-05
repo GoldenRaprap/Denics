@@ -57,48 +57,6 @@ namespace Denics.UserInterface
             LoadAvailableServices();
             RenderCalendar(MonthPicker.Value);
         }
-        private void HomeButton_Click(object sender, EventArgs e)
-        {
-            HomePage homePage = new HomePage();
-            homePage.Show();
-            this.Hide();
-        }
-
-        private void PatientButton_Click(object sender, EventArgs e)
-        {
-            UserProfile userProfile = new UserProfile();
-            userProfile.Show();
-            this.Hide();
-        }
-
-        private void DoctorButton_Click(object sender, EventArgs e)
-        {
-            Doctors doctors = new Doctors();
-            doctors.Show();
-            this.Hide();
-        }
-
-        private void AvailabilityButton_Click(object sender, EventArgs e)
-        {
-            Calendar calendar = new Calendar();
-            calendar.Show();
-            this.Hide();
-        }
-
-        private void AppointmentButton_Click(object sender, EventArgs e)
-        {
-            UserBookingPage userBookingPage = new UserBookingPage();
-            userBookingPage.Show();
-            this.Hide();
-        }
-
-        private void ServicesButton_Click(object sender, EventArgs e)
-        {
-            AvailableServices availableServices = new AvailableServices();
-            availableServices.Show();
-            this.Hide();
-        }
-
 
 
         private void MonthPicker_ValueChanged(object sender, EventArgs e)
@@ -775,5 +733,50 @@ namespace Denics.UserInterface
             book.Show();
             this.Hide();
         }
+
+
+        private void HomeButton_Click(object sender, EventArgs e)
+        {
+            HomePage homePage = new HomePage();
+            homePage.Show();
+            this.Hide();
+        }
+
+        private void PatientButton_Click(object sender, EventArgs e)
+        {
+            UserProfile userProfile = new UserProfile();
+            userProfile.Show();
+            this.Hide();
+        }
+
+        private void DoctorButton_Click(object sender, EventArgs e)
+        {
+            Doctors doctors = new Doctors();
+            doctors.Show();
+            this.Hide();
+        }
+
+        private void AvailabilityButton_Click(object sender, EventArgs e)
+        {
+            Calendar calendar = new Calendar();
+            calendar.Show();
+            this.Hide();
+        }
+
+        private void AppointmentButton_Click(object sender, EventArgs e)
+        {
+            UserBookingPage userBookingPage = new UserBookingPage();
+            userBookingPage.Show();
+            this.Hide();
+        }
+
+        private void ServicesButton_Click(object sender, EventArgs e)
+        {
+            AvailableServices availableServices = new AvailableServices();
+            availableServices.Show();
+            this.Hide();
+        }
+
+
     }
 }

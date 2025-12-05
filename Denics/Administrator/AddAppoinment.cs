@@ -365,9 +365,7 @@ namespace Denics.Administrator
                 surname: boxLName.Text,
                 firstname: boxFName.Text,
                 middlename: string.IsNullOrWhiteSpace(MiddleName_txtbx.Text) ? null : MiddleName_txtbx.Text,
-                suffix: string.IsNullOrWhiteSpace(Suffix_txtbx.Text) ? null : Suffix_txtbx.Text,
                 gender: gender,
-                hashedPassword: hashedPassword,
                 contact: boxNumber.Text,
                 birthdate: Birthdate_cldr.Value.Date,
                 address: textBox1.Text

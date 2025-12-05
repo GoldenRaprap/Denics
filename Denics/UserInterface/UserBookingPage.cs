@@ -83,7 +83,7 @@ namespace Denics.UserInterface
             SetupAppointmentPickersAndSlots();
             LoadServices();
 
-            // If AppointmentCart contains a pre-selection from the Calendar, apply it to the booking controls.
+            // If AppointmentCart contains a pre-selection from the Calendar, apply it to the booking controls.  GetSelectedAppointmentFromCombo
             TryApplyAppointmentCartValues();
 
             LoadUserAppointments();
@@ -359,7 +359,7 @@ namespace Denics.UserInterface
                     return dt.TimeOfDay;
             }
 
-            // last-resort: try to extract numbers like "3" or "15" -> treat as hour
+            // last-resort: try to extract numbers like "3" or "15" -> treat as hour  selectedDoctor
             var digits = new string(timeText.Where(c => char.IsDigit(c) || c == ':').ToArray());
             if (TimeSpan.TryParse(digits, out ts)) return ts;
 

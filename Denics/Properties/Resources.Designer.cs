@@ -463,6 +463,16 @@ namespace Denics.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Service___Tooth_Filling {
+            get {
+                object obj = ResourceManager.GetObject("Service - Tooth Filling", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Setting_bg {
             get {
                 object obj = ResourceManager.GetObject("Setting_bg", resourceCulture);

@@ -51,7 +51,7 @@
             Body_sctn = new TableLayoutPanel();
             LoginForn_sctn = new TableLayoutPanel();
             filler1 = new Panel();
-            Login_lbl = new Label();
+            Booking_lbl = new Label();
             panel1 = new Panel();
             Txtbx_sctn = new TableLayoutPanel();
             Email_sctn = new Panel();
@@ -229,7 +229,7 @@
             BottomFooter.Controls.Add(Footer_OpeningHours_sctn, 4, 0);
             BottomFooter.Controls.Add(Footer_ContactInfo_sctn, 2, 0);
             BottomFooter.Dock = DockStyle.Bottom;
-            BottomFooter.Location = new Point(0, 800);
+            BottomFooter.Location = new Point(0, 1600);
             BottomFooter.Name = "BottomFooter";
             BottomFooter.RowCount = 1;
             BottomFooter.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
@@ -412,11 +412,14 @@
             Body_sctn.Dock = DockStyle.Fill;
             Body_sctn.Location = new Point(0, 100);
             Body_sctn.Name = "Body_sctn";
-            Body_sctn.RowCount = 3;
+            Body_sctn.RowCount = 6;
             Body_sctn.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
             Body_sctn.RowStyles.Add(new RowStyle(SizeType.Absolute, 550F));
             Body_sctn.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            Body_sctn.Size = new Size(1247, 700);
+            Body_sctn.RowStyles.Add(new RowStyle(SizeType.Absolute, 400F));
+            Body_sctn.RowStyles.Add(new RowStyle(SizeType.Absolute, 400F));
+            Body_sctn.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            Body_sctn.Size = new Size(1247, 1500);
             Body_sctn.TabIndex = 8;
             // 
             // LoginForn_sctn
@@ -427,7 +430,7 @@
             LoginForn_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 60F));
             LoginForn_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
             LoginForn_sctn.Controls.Add(filler1, 1, 1);
-            LoginForn_sctn.Controls.Add(Login_lbl, 1, 0);
+            LoginForn_sctn.Controls.Add(Booking_lbl, 1, 0);
             LoginForn_sctn.Controls.Add(panel1, 1, 3);
             LoginForn_sctn.Controls.Add(Txtbx_sctn, 1, 2);
             LoginForn_sctn.Controls.Add(Button_sctn, 1, 4);
@@ -454,20 +457,20 @@
             filler1.Size = new Size(738, 4);
             filler1.TabIndex = 7;
             // 
-            // Login_lbl
+            // Booking_lbl
             // 
-            Login_lbl.Anchor = AnchorStyles.None;
-            Login_lbl.AutoSize = true;
-            Login_lbl.Cursor = Cursors.Hand;
-            Login_lbl.Font = new Font("Sitka Subheading", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Login_lbl.ForeColor = SystemColors.ControlLight;
-            Login_lbl.ImeMode = ImeMode.NoControl;
-            Login_lbl.Location = new Point(556, 15);
-            Login_lbl.Name = "Login_lbl";
-            Login_lbl.Size = new Size(128, 30);
-            Login_lbl.TabIndex = 8;
-            Login_lbl.Text = "LogIn Form";
-            Login_lbl.TextAlign = ContentAlignment.MiddleCenter;
+            Booking_lbl.Anchor = AnchorStyles.None;
+            Booking_lbl.AutoSize = true;
+            Booking_lbl.Cursor = Cursors.Hand;
+            Booking_lbl.Font = new Font("Sitka Subheading", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Booking_lbl.ForeColor = SystemColors.ControlLight;
+            Booking_lbl.ImeMode = ImeMode.NoControl;
+            Booking_lbl.Location = new Point(544, 15);
+            Booking_lbl.Name = "Booking_lbl";
+            Booking_lbl.Size = new Size(152, 30);
+            Booking_lbl.TabIndex = 8;
+            Booking_lbl.Text = "Booking Form";
+            Booking_lbl.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
@@ -656,7 +659,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            AutoScrollMinSize = new Size(0, 800);
+            AutoScrollMinSize = new Size(0, 1600);
             BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(1264, 861);
             Controls.Add(Body_sctn);
@@ -715,7 +718,7 @@
         private TableLayoutPanel Body_sctn;
         private TableLayoutPanel LoginForn_sctn;
         private Panel filler1;
-        private Label Login_lbl;
+        private Label Booking_lbl;
         private Panel panel1;
         private TableLayoutPanel Txtbx_sctn;
         private TableLayoutPanel Button_sctn;

@@ -9,7 +9,7 @@ namespace Denics
 {
     internal class CallDatabase
     {
-        String databaseStringName = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\RAPHAEL\\Desktop\\Denics Project\\Denics\\Denics\\Denics_ Database\\Denics_db.mdf\";Integrated Security=True;Connect Timeout=30";
+        String databaseStringName = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Amir\\Downloads\\Denics Project-20251204T130804Z-1-001\\Denics Project\\Denics_ Database\\Denics_db.mdf\";Integrated Security=True;Connect Timeout=30;Encrypt=True";
 
         public CallDatabase() { }
         public String getDatabaseStringName()

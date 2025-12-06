@@ -48,6 +48,11 @@
             ClontactInfoBody_ContactNumber = new Label();
             ClontactInfoBody_Address = new Label();
             ContactInfoHead = new Label();
+            Stafflogin = new Label();
+            LoginPanel = new Panel();
+            Login = new Button();
+            Passwordtxtb = new TextBox();
+            Emailtxtb = new TextBox();
             Body_sctn = new TableLayoutPanel();
             BG_img = new Panel();
             TopHeader_sctn = new TableLayoutPanel();
@@ -89,6 +94,7 @@
             ((System.ComponentModel.ISupportInitialize)FooterLogo_img).BeginInit();
             Footer_OpeningHours_sctn.SuspendLayout();
             Footer_ContactInfo_sctn.SuspendLayout();
+            LoginPanel.SuspendLayout();
             Body_sctn.SuspendLayout();
             BG_img.SuspendLayout();
             TopHeader_sctn.SuspendLayout();
@@ -134,10 +140,11 @@
             TopHeader.Controls.Add(Services_lbl, 6, 0);
             TopHeader.Dock = DockStyle.Top;
             TopHeader.Location = new Point(0, 0);
+            TopHeader.Margin = new Padding(3, 4, 3, 4);
             TopHeader.Name = "TopHeader";
             TopHeader.RowCount = 1;
             TopHeader.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            TopHeader.Size = new Size(1247, 100);
+            TopHeader.Size = new Size(1815, 133);
             TopHeader.TabIndex = 3;
             // 
             // Book_lbl
@@ -147,9 +154,9 @@
             Book_lbl.Cursor = Cursors.Hand;
             Book_lbl.Font = new Font("Sitka Subheading", 15.7499981F);
             Book_lbl.ForeColor = SystemColors.ControlLight;
-            Book_lbl.Location = new Point(1105, 35);
+            Book_lbl.Location = new Point(1612, 47);
             Book_lbl.Name = "Book_lbl";
-            Book_lbl.Size = new Size(107, 30);
+            Book_lbl.Size = new Size(136, 39);
             Book_lbl.TabIndex = 5;
             Book_lbl.Text = "Book Now";
             Book_lbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -161,9 +168,10 @@
             Booking_img.BackgroundImage = Properties.Resources.IconBook;
             Booking_img.BackgroundImageLayout = ImageLayout.Zoom;
             Booking_img.Cursor = Cursors.Hand;
-            Booking_img.Location = new Point(1036, 3);
+            Booking_img.Location = new Point(1534, 4);
+            Booking_img.Margin = new Padding(3, 4, 3, 4);
             Booking_img.Name = "Booking_img";
-            Booking_img.Size = new Size(63, 94);
+            Booking_img.Size = new Size(72, 125);
             Booking_img.TabIndex = 5;
             Booking_img.TabStop = false;
             Booking_img.Click += Book_lbl_Click;
@@ -175,9 +183,9 @@
             Home_lbl.Cursor = Cursors.Hand;
             Home_lbl.Font = new Font("Sitka Subheading", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Home_lbl.ForeColor = SystemColors.ControlLight;
-            Home_lbl.Location = new Point(309, 35);
+            Home_lbl.Location = new Point(456, 47);
             Home_lbl.Name = "Home_lbl";
-            Home_lbl.Size = new Size(67, 30);
+            Home_lbl.Size = new Size(87, 39);
             Home_lbl.TabIndex = 1;
             Home_lbl.Text = "Home";
             Home_lbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -190,9 +198,9 @@
             AboutUs_lbl.Cursor = Cursors.Hand;
             AboutUs_lbl.Font = new Font("Sitka Subheading", 15.7499981F);
             AboutUs_lbl.ForeColor = SystemColors.ControlLight;
-            AboutUs_lbl.Location = new Point(433, 35);
+            AboutUs_lbl.Location = new Point(640, 47);
             AboutUs_lbl.Name = "AboutUs_lbl";
-            AboutUs_lbl.Size = new Size(97, 30);
+            AboutUs_lbl.Size = new Size(124, 39);
             AboutUs_lbl.TabIndex = 2;
             AboutUs_lbl.Text = "About Us";
             AboutUs_lbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -204,9 +212,10 @@
             HeaderLogo_img.BackgroundImageLayout = ImageLayout.Zoom;
             HeaderLogo_img.Cursor = Cursors.Hand;
             HeaderLogo_img.Dock = DockStyle.Fill;
-            HeaderLogo_img.Location = new Point(554, 3);
+            HeaderLogo_img.Location = new Point(807, 4);
+            HeaderLogo_img.Margin = new Padding(3, 4, 3, 4);
             HeaderLogo_img.Name = "HeaderLogo_img";
-            HeaderLogo_img.Size = new Size(133, 94);
+            HeaderLogo_img.Size = new Size(197, 125);
             HeaderLogo_img.TabIndex = 1;
             HeaderLogo_img.TabStop = false;
             HeaderLogo_img.Click += Home_lbl_Click;
@@ -218,9 +227,9 @@
             Contact_lbl.Cursor = Cursors.Hand;
             Contact_lbl.Font = new Font("Sitka Subheading", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Contact_lbl.ForeColor = SystemColors.ControlLight;
-            Contact_lbl.Location = new Point(715, 35);
+            Contact_lbl.Location = new Point(1053, 47);
             Contact_lbl.Name = "Contact_lbl";
-            Contact_lbl.Size = new Size(88, 30);
+            Contact_lbl.Size = new Size(110, 39);
             Contact_lbl.TabIndex = 3;
             Contact_lbl.Text = "Contact";
             Contact_lbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -233,9 +242,9 @@
             Services_lbl.Cursor = Cursors.Hand;
             Services_lbl.Font = new Font("Sitka Subheading", 15.7499981F);
             Services_lbl.ForeColor = SystemColors.ControlLight;
-            Services_lbl.Location = new Point(854, 35);
+            Services_lbl.Location = new Point(1254, 47);
             Services_lbl.Name = "Services_lbl";
-            Services_lbl.Size = new Size(88, 30);
+            Services_lbl.Size = new Size(114, 39);
             Services_lbl.TabIndex = 4;
             Services_lbl.Text = "Services";
             Services_lbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -255,12 +264,15 @@
             BottomFooter.Controls.Add(FooterLogo_img, 3, 0);
             BottomFooter.Controls.Add(Footer_OpeningHours_sctn, 4, 0);
             BottomFooter.Controls.Add(Footer_ContactInfo_sctn, 2, 0);
+            BottomFooter.Controls.Add(Stafflogin, 6, 0);
+            BottomFooter.Controls.Add(LoginPanel, 5, 0);
             BottomFooter.Dock = DockStyle.Bottom;
-            BottomFooter.Location = new Point(0, 1350);
+            BottomFooter.Location = new Point(0, 1383);
+            BottomFooter.Margin = new Padding(3, 4, 3, 4);
             BottomFooter.Name = "BottomFooter";
             BottomFooter.RowCount = 1;
             BottomFooter.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            BottomFooter.Size = new Size(1247, 172);
+            BottomFooter.Size = new Size(1815, 229);
             BottomFooter.TabIndex = 5;
             // 
             // FooterLogo_img
@@ -268,9 +280,10 @@
             FooterLogo_img.BackgroundImage = Properties.Resources.Logo__no_bg___Denics;
             FooterLogo_img.BackgroundImageLayout = ImageLayout.Zoom;
             FooterLogo_img.Dock = DockStyle.Fill;
-            FooterLogo_img.Location = new Point(528, 3);
+            FooterLogo_img.Location = new Point(766, 4);
+            FooterLogo_img.Margin = new Padding(3, 4, 3, 4);
             FooterLogo_img.Name = "FooterLogo_img";
-            FooterLogo_img.Size = new Size(190, 166);
+            FooterLogo_img.Size = new Size(279, 221);
             FooterLogo_img.TabIndex = 1;
             FooterLogo_img.TabStop = false;
             // 
@@ -283,14 +296,15 @@
             Footer_OpeningHours_sctn.Controls.Add(OpeningHoursHead, 0, 0);
             Footer_OpeningHours_sctn.Controls.Add(OpeningHours3, 0, 3);
             Footer_OpeningHours_sctn.Dock = DockStyle.Fill;
-            Footer_OpeningHours_sctn.Location = new Point(724, 3);
+            Footer_OpeningHours_sctn.Location = new Point(1051, 4);
+            Footer_OpeningHours_sctn.Margin = new Padding(3, 4, 3, 4);
             Footer_OpeningHours_sctn.Name = "Footer_OpeningHours_sctn";
             Footer_OpeningHours_sctn.RowCount = 4;
             Footer_OpeningHours_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 22F));
             Footer_OpeningHours_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 26F));
             Footer_OpeningHours_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 26F));
             Footer_OpeningHours_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 26F));
-            Footer_OpeningHours_sctn.Size = new Size(190, 166);
+            Footer_OpeningHours_sctn.Size = new Size(279, 221);
             Footer_OpeningHours_sctn.TabIndex = 6;
             // 
             // OpeningHours2
@@ -300,9 +314,9 @@
             OpeningHours2.AutoSize = true;
             OpeningHours2.Font = new Font("Sitka Text", 9F);
             OpeningHours2.ForeColor = Color.White;
-            OpeningHours2.Location = new Point(3, 79);
+            OpeningHours2.Location = new Point(3, 105);
             OpeningHours2.Name = "OpeningHours2";
-            OpeningHours2.Size = new Size(184, 18);
+            OpeningHours2.Size = new Size(273, 21);
             OpeningHours2.TabIndex = 5;
             OpeningHours2.Text = "Saturday: 9:00 AM – 2:00 PM";
             OpeningHours2.TextAlign = ContentAlignment.MiddleCenter;
@@ -314,9 +328,9 @@
             OpeningHours1.AutoSize = true;
             OpeningHours1.Font = new Font("Sitka Text", 9F);
             OpeningHours1.ForeColor = Color.White;
-            OpeningHours1.Location = new Point(3, 36);
+            OpeningHours1.Location = new Point(3, 48);
             OpeningHours1.Name = "OpeningHours1";
-            OpeningHours1.Size = new Size(184, 36);
+            OpeningHours1.Size = new Size(273, 42);
             OpeningHours1.TabIndex = 4;
             OpeningHours1.Text = "Monday to Friday: 9:00 AM – 6:00 PM";
             OpeningHours1.TextAlign = ContentAlignment.MiddleCenter;
@@ -329,7 +343,7 @@
             OpeningHoursHead.ForeColor = SystemColors.ControlLight;
             OpeningHoursHead.Location = new Point(3, 0);
             OpeningHoursHead.Name = "OpeningHoursHead";
-            OpeningHoursHead.Size = new Size(184, 28);
+            OpeningHoursHead.Size = new Size(273, 35);
             OpeningHoursHead.TabIndex = 1;
             OpeningHoursHead.Text = "Opening Hours: ";
             OpeningHoursHead.TextAlign = ContentAlignment.MiddleCenter;
@@ -341,9 +355,9 @@
             OpeningHours3.AutoSize = true;
             OpeningHours3.Font = new Font("Sitka Text", 9F);
             OpeningHours3.ForeColor = Color.White;
-            OpeningHours3.Location = new Point(3, 122);
+            OpeningHours3.Location = new Point(3, 162);
             OpeningHours3.Name = "OpeningHours3";
-            OpeningHours3.Size = new Size(184, 18);
+            OpeningHours3.Size = new Size(273, 21);
             OpeningHours3.TabIndex = 6;
             OpeningHours3.Text = "Sundays and Holidays: Closed";
             OpeningHours3.TextAlign = ContentAlignment.MiddleCenter;
@@ -357,14 +371,15 @@
             Footer_ContactInfo_sctn.Controls.Add(ClontactInfoBody_Address, 0, 1);
             Footer_ContactInfo_sctn.Controls.Add(ContactInfoHead, 0, 0);
             Footer_ContactInfo_sctn.Dock = DockStyle.Fill;
-            Footer_ContactInfo_sctn.Location = new Point(332, 3);
+            Footer_ContactInfo_sctn.Location = new Point(481, 4);
+            Footer_ContactInfo_sctn.Margin = new Padding(3, 4, 3, 4);
             Footer_ContactInfo_sctn.Name = "Footer_ContactInfo_sctn";
             Footer_ContactInfo_sctn.RowCount = 4;
             Footer_ContactInfo_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 22F));
             Footer_ContactInfo_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 26F));
             Footer_ContactInfo_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 26F));
             Footer_ContactInfo_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 26F));
-            Footer_ContactInfo_sctn.Size = new Size(190, 166);
+            Footer_ContactInfo_sctn.Size = new Size(279, 221);
             Footer_ContactInfo_sctn.TabIndex = 5;
             // 
             // ClontactInfoBody_Email
@@ -374,9 +389,9 @@
             ClontactInfoBody_Email.AutoSize = true;
             ClontactInfoBody_Email.Font = new Font("Sitka Text", 9F);
             ClontactInfoBody_Email.ForeColor = Color.White;
-            ClontactInfoBody_Email.Location = new Point(3, 122);
+            ClontactInfoBody_Email.Location = new Point(3, 162);
             ClontactInfoBody_Email.Name = "ClontactInfoBody_Email";
-            ClontactInfoBody_Email.Size = new Size(184, 18);
+            ClontactInfoBody_Email.Size = new Size(273, 21);
             ClontactInfoBody_Email.TabIndex = 6;
             ClontactInfoBody_Email.Text = "denicsdental@gmail.com";
             ClontactInfoBody_Email.TextAlign = ContentAlignment.MiddleCenter;
@@ -388,9 +403,9 @@
             ClontactInfoBody_ContactNumber.AutoSize = true;
             ClontactInfoBody_ContactNumber.Font = new Font("Sitka Text", 9F);
             ClontactInfoBody_ContactNumber.ForeColor = Color.White;
-            ClontactInfoBody_ContactNumber.Location = new Point(3, 79);
+            ClontactInfoBody_ContactNumber.Location = new Point(3, 105);
             ClontactInfoBody_ContactNumber.Name = "ClontactInfoBody_ContactNumber";
-            ClontactInfoBody_ContactNumber.Size = new Size(184, 36);
+            ClontactInfoBody_ContactNumber.Size = new Size(273, 21);
             ClontactInfoBody_ContactNumber.TabIndex = 5;
             ClontactInfoBody_ContactNumber.Text = "(02) 3456-7890 | +63 917 123 4567";
             ClontactInfoBody_ContactNumber.TextAlign = ContentAlignment.MiddleCenter;
@@ -402,9 +417,9 @@
             ClontactInfoBody_Address.AutoSize = true;
             ClontactInfoBody_Address.Font = new Font("Sitka Text", 9F);
             ClontactInfoBody_Address.ForeColor = Color.White;
-            ClontactInfoBody_Address.Location = new Point(3, 36);
+            ClontactInfoBody_Address.Location = new Point(3, 48);
             ClontactInfoBody_Address.Name = "ClontactInfoBody_Address";
-            ClontactInfoBody_Address.Size = new Size(184, 36);
+            ClontactInfoBody_Address.Size = new Size(273, 42);
             ClontactInfoBody_Address.TabIndex = 4;
             ClontactInfoBody_Address.Text = "123 Health Avenue, Suite 204, Makati City, Metro Manila";
             ClontactInfoBody_Address.TextAlign = ContentAlignment.MiddleCenter;
@@ -417,10 +432,61 @@
             ContactInfoHead.ForeColor = SystemColors.ControlLight;
             ContactInfoHead.Location = new Point(3, 0);
             ContactInfoHead.Name = "ContactInfoHead";
-            ContactInfoHead.Size = new Size(184, 28);
+            ContactInfoHead.Size = new Size(273, 35);
             ContactInfoHead.TabIndex = 1;
             ContactInfoHead.Text = "Contact Info";
             ContactInfoHead.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Stafflogin
+            // 
+            Stafflogin.AccessibleName = "Stafflogin";
+            Stafflogin.Anchor = AnchorStyles.None;
+            Stafflogin.AutoSize = true;
+            Stafflogin.Cursor = Cursors.Hand;
+            Stafflogin.Font = new Font("Sitka Subheading", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
+            Stafflogin.ForeColor = SystemColors.ControlLight;
+            Stafflogin.Location = new Point(1658, 100);
+            Stafflogin.Name = "Stafflogin";
+            Stafflogin.Size = new Size(116, 29);
+            Stafflogin.TabIndex = 10;
+            Stafflogin.Text = "Staff Login";
+            Stafflogin.TextAlign = ContentAlignment.BottomRight;
+            Stafflogin.Click += Stafflogin_Click;
+            // 
+            // LoginPanel
+            // 
+            LoginPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            LoginPanel.Controls.Add(Login);
+            LoginPanel.Controls.Add(Passwordtxtb);
+            LoginPanel.Controls.Add(Emailtxtb);
+            LoginPanel.Location = new Point(1336, 3);
+            LoginPanel.Name = "LoginPanel";
+            LoginPanel.Size = new Size(279, 223);
+            LoginPanel.TabIndex = 11;
+            LoginPanel.Visible = false;
+            // 
+            // Login
+            // 
+            Login.Location = new Point(113, 154);
+            Login.Name = "Login";
+            Login.Size = new Size(59, 30);
+            Login.TabIndex = 2;
+            Login.Text = "LogInbtn";
+            Login.UseVisualStyleBackColor = true;
+            // 
+            // Passwordtxtb
+            // 
+            Passwordtxtb.Location = new Point(50, 101);
+            Passwordtxtb.Name = "Passwordtxtb";
+            Passwordtxtb.Size = new Size(182, 27);
+            Passwordtxtb.TabIndex = 1;
+            // 
+            // Emailtxtb
+            // 
+            Emailtxtb.Location = new Point(50, 49);
+            Emailtxtb.Name = "Emailtxtb";
+            Emailtxtb.Size = new Size(183, 27);
+            Emailtxtb.TabIndex = 0;
             // 
             // Body_sctn
             // 
@@ -432,15 +498,16 @@
             Body_sctn.Controls.Add(Encouragement_lbl, 0, 2);
             Body_sctn.Controls.Add(GoogleMapsimg, 0, 3);
             Body_sctn.Dock = DockStyle.Fill;
-            Body_sctn.Location = new Point(0, 100);
+            Body_sctn.Location = new Point(0, 133);
+            Body_sctn.Margin = new Padding(3, 4, 3, 4);
             Body_sctn.Name = "Body_sctn";
             Body_sctn.RowCount = 5;
-            Body_sctn.RowStyles.Add(new RowStyle(SizeType.Absolute, 350F));
-            Body_sctn.RowStyles.Add(new RowStyle(SizeType.Absolute, 250F));
-            Body_sctn.RowStyles.Add(new RowStyle(SizeType.Absolute, 200F));
-            Body_sctn.RowStyles.Add(new RowStyle(SizeType.Absolute, 350F));
-            Body_sctn.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            Body_sctn.Size = new Size(1247, 1250);
+            Body_sctn.RowStyles.Add(new RowStyle(SizeType.Absolute, 467F));
+            Body_sctn.RowStyles.Add(new RowStyle(SizeType.Absolute, 333F));
+            Body_sctn.RowStyles.Add(new RowStyle(SizeType.Absolute, 267F));
+            Body_sctn.RowStyles.Add(new RowStyle(SizeType.Absolute, 467F));
+            Body_sctn.RowStyles.Add(new RowStyle(SizeType.Absolute, 27F));
+            Body_sctn.Size = new Size(1815, 1250);
             Body_sctn.TabIndex = 6;
             // 
             // BG_img
@@ -449,9 +516,10 @@
             BG_img.BackgroundImageLayout = ImageLayout.Center;
             BG_img.Controls.Add(TopHeader_sctn);
             BG_img.Dock = DockStyle.Fill;
-            BG_img.Location = new Point(3, 3);
+            BG_img.Location = new Point(3, 4);
+            BG_img.Margin = new Padding(3, 4, 3, 4);
             BG_img.Name = "BG_img";
-            BG_img.Size = new Size(1241, 344);
+            BG_img.Size = new Size(1809, 459);
             BG_img.TabIndex = 1;
             // 
             // TopHeader_sctn
@@ -462,11 +530,12 @@
             TopHeader_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15F));
             TopHeader_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 85F));
             TopHeader_sctn.Controls.Add(Slogan_lbl, 1, 0);
-            TopHeader_sctn.Location = new Point(0, 333);
+            TopHeader_sctn.Location = new Point(0, 444);
+            TopHeader_sctn.Margin = new Padding(3, 4, 3, 4);
             TopHeader_sctn.Name = "TopHeader_sctn";
             TopHeader_sctn.RowCount = 1;
             TopHeader_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            TopHeader_sctn.Size = new Size(2282, 133);
+            TopHeader_sctn.Size = new Size(2999, 177);
             TopHeader_sctn.TabIndex = 7;
             // 
             // Slogan_lbl
@@ -477,9 +546,9 @@
             Slogan_lbl.Font = new Font("Sitka Text", 36F);
             Slogan_lbl.ForeColor = Color.White;
             Slogan_lbl.ImeMode = ImeMode.NoControl;
-            Slogan_lbl.Location = new Point(345, 32);
+            Slogan_lbl.Location = new Point(452, 45);
             Slogan_lbl.Name = "Slogan_lbl";
-            Slogan_lbl.Size = new Size(1934, 69);
+            Slogan_lbl.Size = new Size(2544, 87);
             Slogan_lbl.TabIndex = 5;
             Slogan_lbl.Text = "Home | Contact";
             Slogan_lbl.TextAlign = ContentAlignment.MiddleLeft;
@@ -491,13 +560,13 @@
             Info_sctn.ColumnCount = 11;
             Info_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.5676355F));
             Info_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15.0966187F));
-            Info_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 10F));
+            Info_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 11F));
             Info_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15.0966187F));
-            Info_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 10F));
+            Info_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 11F));
             Info_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 18.4782619F));
-            Info_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 10F));
+            Info_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 11F));
             Info_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15.0966187F));
-            Info_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 10F));
+            Info_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 11F));
             Info_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15.0966187F));
             Info_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.5676336F));
             Info_sctn.Controls.Add(Facebook_sctn, 9, 0);
@@ -510,32 +579,34 @@
             Info_sctn.Controls.Add(Divider4, 8, 0);
             Info_sctn.Controls.Add(EmailInfo_sctn, 1, 0);
             Info_sctn.Dock = DockStyle.Fill;
-            Info_sctn.Location = new Point(3, 353);
+            Info_sctn.Location = new Point(3, 471);
+            Info_sctn.Margin = new Padding(3, 4, 3, 4);
             Info_sctn.Name = "Info_sctn";
             Info_sctn.RowCount = 1;
             Info_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            Info_sctn.Size = new Size(1241, 244);
+            Info_sctn.Size = new Size(1809, 325);
             Info_sctn.TabIndex = 2;
             // 
             // Facebook_sctn
             // 
             Facebook_sctn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             Facebook_sctn.ColumnCount = 3;
-            Facebook_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            Facebook_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 23F));
             Facebook_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            Facebook_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            Facebook_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 23F));
             Facebook_sctn.Controls.Add(FacebookInfo_lbl, 1, 1);
             Facebook_sctn.Controls.Add(FacebookTitle_lbl, 1, 0);
             Facebook_sctn.Controls.Add(Facebook_img, 1, 2);
             Facebook_sctn.Dock = DockStyle.Fill;
-            Facebook_sctn.Location = new Point(933, 3);
+            Facebook_sctn.Location = new Point(1357, 4);
+            Facebook_sctn.Margin = new Padding(3, 4, 3, 4);
             Facebook_sctn.Name = "Facebook_sctn";
             Facebook_sctn.RowCount = 4;
             Facebook_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 30F));
             Facebook_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
             Facebook_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 30F));
-            Facebook_sctn.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            Facebook_sctn.Size = new Size(175, 238);
+            Facebook_sctn.RowStyles.Add(new RowStyle(SizeType.Absolute, 27F));
+            Facebook_sctn.Size = new Size(260, 317);
             Facebook_sctn.TabIndex = 9;
             // 
             // FacebookInfo_lbl
@@ -545,9 +616,9 @@
             FacebookInfo_lbl.Dock = DockStyle.Fill;
             FacebookInfo_lbl.Font = new Font("Sitka Text", 9F);
             FacebookInfo_lbl.ForeColor = Color.White;
-            FacebookInfo_lbl.Location = new Point(23, 65);
+            FacebookInfo_lbl.Location = new Point(26, 87);
             FacebookInfo_lbl.Name = "FacebookInfo_lbl";
-            FacebookInfo_lbl.Size = new Size(129, 87);
+            FacebookInfo_lbl.Size = new Size(208, 116);
             FacebookInfo_lbl.TabIndex = 2;
             FacebookInfo_lbl.Text = "www.facebook.com/DenicsOfficial";
             FacebookInfo_lbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -559,9 +630,9 @@
             FacebookTitle_lbl.BackColor = Color.CornflowerBlue;
             FacebookTitle_lbl.Font = new Font("Sitka Text", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             FacebookTitle_lbl.ForeColor = Color.White;
-            FacebookTitle_lbl.Location = new Point(23, 35);
+            FacebookTitle_lbl.Location = new Point(26, 48);
             FacebookTitle_lbl.Name = "FacebookTitle_lbl";
-            FacebookTitle_lbl.Size = new Size(129, 30);
+            FacebookTitle_lbl.Size = new Size(208, 39);
             FacebookTitle_lbl.TabIndex = 1;
             FacebookTitle_lbl.Text = "Facebook";
             FacebookTitle_lbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -571,9 +642,10 @@
             Facebook_img.BackgroundImage = Properties.Resources.IconPatient;
             Facebook_img.BackgroundImageLayout = ImageLayout.Zoom;
             Facebook_img.Dock = DockStyle.Fill;
-            Facebook_img.Location = new Point(23, 155);
+            Facebook_img.Location = new Point(26, 207);
+            Facebook_img.Margin = new Padding(3, 4, 3, 4);
             Facebook_img.Name = "Facebook_img";
-            Facebook_img.Size = new Size(129, 59);
+            Facebook_img.Size = new Size(208, 79);
             Facebook_img.TabIndex = 3;
             Facebook_img.TabStop = false;
             // 
@@ -581,21 +653,22 @@
             // 
             Address_sctn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             Address_sctn.ColumnCount = 3;
-            Address_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            Address_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 23F));
             Address_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            Address_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            Address_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 23F));
             Address_sctn.Controls.Add(AddressInfo_lbl, 1, 1);
             Address_sctn.Controls.Add(AddressTitle, 1, 0);
             Address_sctn.Controls.Add(Address_img, 1, 2);
             Address_sctn.Dock = DockStyle.Fill;
-            Address_sctn.Location = new Point(742, 3);
+            Address_sctn.Location = new Point(1080, 4);
+            Address_sctn.Margin = new Padding(3, 4, 3, 4);
             Address_sctn.Name = "Address_sctn";
             Address_sctn.RowCount = 4;
             Address_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 30F));
             Address_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
             Address_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 30F));
-            Address_sctn.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            Address_sctn.Size = new Size(175, 238);
+            Address_sctn.RowStyles.Add(new RowStyle(SizeType.Absolute, 27F));
+            Address_sctn.Size = new Size(260, 317);
             Address_sctn.TabIndex = 8;
             // 
             // AddressInfo_lbl
@@ -606,9 +679,9 @@
             AddressInfo_lbl.Dock = DockStyle.Fill;
             AddressInfo_lbl.Font = new Font("Sitka Text", 9F);
             AddressInfo_lbl.ForeColor = Color.White;
-            AddressInfo_lbl.Location = new Point(23, 65);
+            AddressInfo_lbl.Location = new Point(26, 87);
             AddressInfo_lbl.Name = "AddressInfo_lbl";
-            AddressInfo_lbl.Size = new Size(129, 87);
+            AddressInfo_lbl.Size = new Size(208, 116);
             AddressInfo_lbl.TabIndex = 2;
             AddressInfo_lbl.Text = "123 Health Avenue, Suite 204, Makati City, Metro Manila";
             AddressInfo_lbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -620,9 +693,9 @@
             AddressTitle.BackColor = Color.CornflowerBlue;
             AddressTitle.Font = new Font("Sitka Text", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             AddressTitle.ForeColor = Color.White;
-            AddressTitle.Location = new Point(23, 35);
+            AddressTitle.Location = new Point(26, 48);
             AddressTitle.Name = "AddressTitle";
-            AddressTitle.Size = new Size(129, 30);
+            AddressTitle.Size = new Size(208, 39);
             AddressTitle.TabIndex = 1;
             AddressTitle.Text = "Address";
             AddressTitle.TextAlign = ContentAlignment.MiddleCenter;
@@ -632,9 +705,10 @@
             Address_img.BackgroundImage = Properties.Resources.IconMap;
             Address_img.BackgroundImageLayout = ImageLayout.Zoom;
             Address_img.Dock = DockStyle.Fill;
-            Address_img.Location = new Point(23, 155);
+            Address_img.Location = new Point(26, 207);
+            Address_img.Margin = new Padding(3, 4, 3, 4);
             Address_img.Name = "Address_img";
-            Address_img.Size = new Size(129, 59);
+            Address_img.Size = new Size(208, 79);
             Address_img.TabIndex = 3;
             Address_img.TabStop = false;
             // 
@@ -642,21 +716,22 @@
             // 
             OpeningHours_sctn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             OpeningHours_sctn.ColumnCount = 3;
-            OpeningHours_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 10F));
+            OpeningHours_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 11F));
             OpeningHours_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            OpeningHours_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 10F));
+            OpeningHours_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 11F));
             OpeningHours_sctn.Controls.Add(OpeningHoursTitle_lbl, 1, 0);
             OpeningHours_sctn.Controls.Add(OpeningHours_img, 1, 2);
             OpeningHours_sctn.Controls.Add(OpeningHoursInfo_sctn, 1, 1);
             OpeningHours_sctn.Dock = DockStyle.Fill;
-            OpeningHours_sctn.Location = new Point(511, 3);
+            OpeningHours_sctn.Location = new Point(743, 4);
+            OpeningHours_sctn.Margin = new Padding(3, 4, 3, 4);
             OpeningHours_sctn.Name = "OpeningHours_sctn";
             OpeningHours_sctn.RowCount = 4;
             OpeningHours_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             OpeningHours_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             OpeningHours_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 30F));
-            OpeningHours_sctn.RowStyles.Add(new RowStyle(SizeType.Absolute, 10F));
-            OpeningHours_sctn.Size = new Size(215, 238);
+            OpeningHours_sctn.RowStyles.Add(new RowStyle(SizeType.Absolute, 13F));
+            OpeningHours_sctn.Size = new Size(320, 317);
             OpeningHours_sctn.TabIndex = 7;
             // 
             // OpeningHoursTitle_lbl
@@ -666,9 +741,9 @@
             OpeningHoursTitle_lbl.BackColor = Color.CornflowerBlue;
             OpeningHoursTitle_lbl.Font = new Font("Sitka Text", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             OpeningHoursTitle_lbl.ForeColor = Color.White;
-            OpeningHoursTitle_lbl.Location = new Point(13, 15);
+            OpeningHoursTitle_lbl.Location = new Point(14, 21);
             OpeningHoursTitle_lbl.Name = "OpeningHoursTitle_lbl";
-            OpeningHoursTitle_lbl.Size = new Size(189, 30);
+            OpeningHoursTitle_lbl.Size = new Size(292, 39);
             OpeningHoursTitle_lbl.TabIndex = 1;
             OpeningHoursTitle_lbl.Text = "Opening Hours";
             OpeningHoursTitle_lbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -678,9 +753,10 @@
             OpeningHours_img.BackgroundImage = Properties.Resources.Iconcalendar;
             OpeningHours_img.BackgroundImageLayout = ImageLayout.Zoom;
             OpeningHours_img.Dock = DockStyle.Fill;
-            OpeningHours_img.Location = new Point(13, 162);
+            OpeningHours_img.Location = new Point(14, 216);
+            OpeningHours_img.Margin = new Padding(3, 4, 3, 4);
             OpeningHours_img.Name = "OpeningHours_img";
-            OpeningHours_img.Size = new Size(189, 62);
+            OpeningHours_img.Size = new Size(292, 83);
             OpeningHours_img.TabIndex = 3;
             OpeningHours_img.TabStop = false;
             // 
@@ -692,13 +768,14 @@
             OpeningHoursInfo_sctn.Controls.Add(OpeingInfo2_lbl, 0, 1);
             OpeningHoursInfo_sctn.Controls.Add(OpeingInfo1_lbl, 0, 0);
             OpeningHoursInfo_sctn.Dock = DockStyle.Fill;
-            OpeningHoursInfo_sctn.Location = new Point(13, 48);
+            OpeningHoursInfo_sctn.Location = new Point(14, 64);
+            OpeningHoursInfo_sctn.Margin = new Padding(3, 4, 3, 4);
             OpeningHoursInfo_sctn.Name = "OpeningHoursInfo_sctn";
             OpeningHoursInfo_sctn.RowCount = 3;
             OpeningHoursInfo_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
             OpeningHoursInfo_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 30F));
             OpeningHoursInfo_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 30F));
-            OpeningHoursInfo_sctn.Size = new Size(189, 108);
+            OpeningHoursInfo_sctn.Size = new Size(292, 144);
             OpeningHoursInfo_sctn.TabIndex = 4;
             // 
             // OpeingInfo3_lbl
@@ -709,9 +786,9 @@
             OpeingInfo3_lbl.Dock = DockStyle.Fill;
             OpeingInfo3_lbl.Font = new Font("Sitka Text", 9F);
             OpeingInfo3_lbl.ForeColor = Color.White;
-            OpeingInfo3_lbl.Location = new Point(3, 75);
+            OpeingInfo3_lbl.Location = new Point(3, 100);
             OpeingInfo3_lbl.Name = "OpeingInfo3_lbl";
-            OpeingInfo3_lbl.Size = new Size(183, 33);
+            OpeingInfo3_lbl.Size = new Size(286, 44);
             OpeingInfo3_lbl.TabIndex = 5;
             OpeingInfo3_lbl.Text = "Sundays and Holidays: Closed";
             OpeingInfo3_lbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -724,9 +801,9 @@
             OpeingInfo2_lbl.Dock = DockStyle.Fill;
             OpeingInfo2_lbl.Font = new Font("Sitka Text", 9F);
             OpeingInfo2_lbl.ForeColor = Color.White;
-            OpeingInfo2_lbl.Location = new Point(3, 43);
+            OpeingInfo2_lbl.Location = new Point(3, 57);
             OpeingInfo2_lbl.Name = "OpeingInfo2_lbl";
-            OpeingInfo2_lbl.Size = new Size(183, 32);
+            OpeingInfo2_lbl.Size = new Size(286, 43);
             OpeingInfo2_lbl.TabIndex = 4;
             OpeingInfo2_lbl.Text = "Saturday: 9:00 AM to 2:00 PM";
             OpeingInfo2_lbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -741,7 +818,7 @@
             OpeingInfo1_lbl.ForeColor = Color.White;
             OpeingInfo1_lbl.Location = new Point(3, 0);
             OpeingInfo1_lbl.Name = "OpeingInfo1_lbl";
-            OpeingInfo1_lbl.Size = new Size(183, 43);
+            OpeingInfo1_lbl.Size = new Size(286, 57);
             OpeingInfo1_lbl.TabIndex = 3;
             OpeingInfo1_lbl.Text = "Monday to Friday: 9:00 AM to 6:00 PM";
             OpeingInfo1_lbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -750,21 +827,22 @@
             // 
             Contact_sctn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             Contact_sctn.ColumnCount = 3;
-            Contact_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            Contact_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 23F));
             Contact_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            Contact_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            Contact_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 23F));
             Contact_sctn.Controls.Add(ContactInfo_lbl, 1, 1);
             Contact_sctn.Controls.Add(ContactTitle_lbl, 1, 0);
             Contact_sctn.Controls.Add(Contact_img, 1, 2);
             Contact_sctn.Dock = DockStyle.Fill;
-            Contact_sctn.Location = new Point(320, 3);
+            Contact_sctn.Location = new Point(466, 4);
+            Contact_sctn.Margin = new Padding(3, 4, 3, 4);
             Contact_sctn.Name = "Contact_sctn";
             Contact_sctn.RowCount = 4;
             Contact_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 30F));
             Contact_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
             Contact_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 30F));
-            Contact_sctn.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            Contact_sctn.Size = new Size(175, 238);
+            Contact_sctn.RowStyles.Add(new RowStyle(SizeType.Absolute, 27F));
+            Contact_sctn.Size = new Size(260, 317);
             Contact_sctn.TabIndex = 6;
             // 
             // ContactInfo_lbl
@@ -774,9 +852,9 @@
             ContactInfo_lbl.Dock = DockStyle.Fill;
             ContactInfo_lbl.Font = new Font("Sitka Text", 9F);
             ContactInfo_lbl.ForeColor = Color.White;
-            ContactInfo_lbl.Location = new Point(23, 65);
+            ContactInfo_lbl.Location = new Point(26, 87);
             ContactInfo_lbl.Name = "ContactInfo_lbl";
-            ContactInfo_lbl.Size = new Size(129, 87);
+            ContactInfo_lbl.Size = new Size(208, 116);
             ContactInfo_lbl.TabIndex = 2;
             ContactInfo_lbl.Text = "(02) 3456-7890 | +63 917 123 4567";
             ContactInfo_lbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -788,9 +866,9 @@
             ContactTitle_lbl.BackColor = Color.CornflowerBlue;
             ContactTitle_lbl.Font = new Font("Sitka Text", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ContactTitle_lbl.ForeColor = Color.White;
-            ContactTitle_lbl.Location = new Point(23, 35);
+            ContactTitle_lbl.Location = new Point(26, 48);
             ContactTitle_lbl.Name = "ContactTitle_lbl";
-            ContactTitle_lbl.Size = new Size(129, 30);
+            ContactTitle_lbl.Size = new Size(208, 39);
             ContactTitle_lbl.TabIndex = 1;
             ContactTitle_lbl.Text = "Contact";
             ContactTitle_lbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -800,9 +878,10 @@
             Contact_img.BackgroundImage = Properties.Resources.IconPhone;
             Contact_img.BackgroundImageLayout = ImageLayout.Zoom;
             Contact_img.Dock = DockStyle.Fill;
-            Contact_img.Location = new Point(23, 155);
+            Contact_img.Location = new Point(26, 207);
+            Contact_img.Margin = new Padding(3, 4, 3, 4);
             Contact_img.Name = "Contact_img";
-            Contact_img.Size = new Size(129, 59);
+            Contact_img.Size = new Size(208, 79);
             Contact_img.TabIndex = 3;
             Contact_img.TabStop = false;
             // 
@@ -810,9 +889,10 @@
             // 
             Divider1.Anchor = AnchorStyles.None;
             Divider1.BackColor = Color.White;
-            Divider1.Location = new Point(310, 41);
+            Divider1.Location = new Point(455, 55);
+            Divider1.Margin = new Padding(3, 4, 3, 4);
             Divider1.Name = "Divider1";
-            Divider1.Size = new Size(4, 161);
+            Divider1.Size = new Size(5, 215);
             Divider1.TabIndex = 0;
             Divider1.TabStop = false;
             // 
@@ -820,9 +900,10 @@
             // 
             Divider2.Anchor = AnchorStyles.None;
             Divider2.BackColor = Color.White;
-            Divider2.Location = new Point(501, 41);
+            Divider2.Location = new Point(732, 55);
+            Divider2.Margin = new Padding(3, 4, 3, 4);
             Divider2.Name = "Divider2";
-            Divider2.Size = new Size(4, 161);
+            Divider2.Size = new Size(5, 215);
             Divider2.TabIndex = 1;
             Divider2.TabStop = false;
             // 
@@ -830,9 +911,10 @@
             // 
             Divider3.Anchor = AnchorStyles.None;
             Divider3.BackColor = Color.White;
-            Divider3.Location = new Point(732, 41);
+            Divider3.Location = new Point(1069, 55);
+            Divider3.Margin = new Padding(3, 4, 3, 4);
             Divider3.Name = "Divider3";
-            Divider3.Size = new Size(4, 161);
+            Divider3.Size = new Size(5, 215);
             Divider3.TabIndex = 2;
             Divider3.TabStop = false;
             // 
@@ -840,9 +922,10 @@
             // 
             Divider4.Anchor = AnchorStyles.None;
             Divider4.BackColor = Color.White;
-            Divider4.Location = new Point(923, 41);
+            Divider4.Location = new Point(1346, 55);
+            Divider4.Margin = new Padding(3, 4, 3, 4);
             Divider4.Name = "Divider4";
-            Divider4.Size = new Size(4, 161);
+            Divider4.Size = new Size(5, 215);
             Divider4.TabIndex = 3;
             Divider4.TabStop = false;
             // 
@@ -850,21 +933,22 @@
             // 
             EmailInfo_sctn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             EmailInfo_sctn.ColumnCount = 3;
-            EmailInfo_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            EmailInfo_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 23F));
             EmailInfo_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            EmailInfo_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            EmailInfo_sctn.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 23F));
             EmailInfo_sctn.Controls.Add(EmailInfo_lbl, 1, 1);
             EmailInfo_sctn.Controls.Add(EmailTitle_lbl, 1, 0);
             EmailInfo_sctn.Controls.Add(Email_img, 1, 2);
             EmailInfo_sctn.Dock = DockStyle.Fill;
-            EmailInfo_sctn.Location = new Point(129, 3);
+            EmailInfo_sctn.Location = new Point(189, 4);
+            EmailInfo_sctn.Margin = new Padding(3, 4, 3, 4);
             EmailInfo_sctn.Name = "EmailInfo_sctn";
             EmailInfo_sctn.RowCount = 4;
             EmailInfo_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 30F));
             EmailInfo_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
             EmailInfo_sctn.RowStyles.Add(new RowStyle(SizeType.Percent, 30F));
-            EmailInfo_sctn.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            EmailInfo_sctn.Size = new Size(175, 238);
+            EmailInfo_sctn.RowStyles.Add(new RowStyle(SizeType.Absolute, 27F));
+            EmailInfo_sctn.Size = new Size(260, 317);
             EmailInfo_sctn.TabIndex = 4;
             // 
             // EmailInfo_lbl
@@ -874,9 +958,9 @@
             EmailInfo_lbl.Dock = DockStyle.Fill;
             EmailInfo_lbl.Font = new Font("Sitka Text", 9F);
             EmailInfo_lbl.ForeColor = Color.White;
-            EmailInfo_lbl.Location = new Point(23, 65);
+            EmailInfo_lbl.Location = new Point(26, 87);
             EmailInfo_lbl.Name = "EmailInfo_lbl";
-            EmailInfo_lbl.Size = new Size(129, 87);
+            EmailInfo_lbl.Size = new Size(208, 116);
             EmailInfo_lbl.TabIndex = 2;
             EmailInfo_lbl.Text = "denicsdental@gmail.com";
             EmailInfo_lbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -888,9 +972,9 @@
             EmailTitle_lbl.BackColor = Color.CornflowerBlue;
             EmailTitle_lbl.Font = new Font("Sitka Text", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             EmailTitle_lbl.ForeColor = Color.White;
-            EmailTitle_lbl.Location = new Point(23, 35);
+            EmailTitle_lbl.Location = new Point(26, 48);
             EmailTitle_lbl.Name = "EmailTitle_lbl";
-            EmailTitle_lbl.Size = new Size(129, 30);
+            EmailTitle_lbl.Size = new Size(208, 39);
             EmailTitle_lbl.TabIndex = 1;
             EmailTitle_lbl.Text = "Email";
             EmailTitle_lbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -900,9 +984,10 @@
             Email_img.BackgroundImage = Properties.Resources.IconMail;
             Email_img.BackgroundImageLayout = ImageLayout.Zoom;
             Email_img.Dock = DockStyle.Fill;
-            Email_img.Location = new Point(23, 155);
+            Email_img.Location = new Point(26, 207);
+            Email_img.Margin = new Padding(3, 4, 3, 4);
             Email_img.Name = "Email_img";
-            Email_img.Size = new Size(129, 59);
+            Email_img.Size = new Size(208, 79);
             Email_img.TabIndex = 3;
             Email_img.TabStop = false;
             // 
@@ -913,9 +998,9 @@
             Encouragement_lbl.BackColor = Color.Transparent;
             Encouragement_lbl.Font = new Font("Sitka Text", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Encouragement_lbl.ForeColor = Color.Black;
-            Encouragement_lbl.Location = new Point(66, 676);
+            Encouragement_lbl.Location = new Point(215, 904);
             Encouragement_lbl.Name = "Encouragement_lbl";
-            Encouragement_lbl.Size = new Size(1115, 47);
+            Encouragement_lbl.Size = new Size(1385, 58);
             Encouragement_lbl.TabIndex = 3;
             Encouragement_lbl.Text = "Come Visit Us and Book an Appointment to Take Good Care of Your Teeth";
             Encouragement_lbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -925,37 +1010,41 @@
             GoogleMapsimg.BackgroundImage = Properties.Resources.GoogleMaps1;
             GoogleMapsimg.BackgroundImageLayout = ImageLayout.Center;
             GoogleMapsimg.Dock = DockStyle.Fill;
-            GoogleMapsimg.Location = new Point(3, 803);
+            GoogleMapsimg.Location = new Point(3, 1071);
+            GoogleMapsimg.Margin = new Padding(3, 4, 3, 4);
             GoogleMapsimg.Name = "GoogleMapsimg";
-            GoogleMapsimg.Size = new Size(1241, 344);
+            GoogleMapsimg.Size = new Size(1809, 459);
             GoogleMapsimg.TabIndex = 4;
             GoogleMapsimg.TabStop = false;
             // 
             // FContact
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             AutoScrollMargin = new Size(0, 1250);
-            ClientSize = new Size(1264, 861);
+            ClientSize = new Size(1836, 1055);
             Controls.Add(Body_sctn);
             Controls.Add(BottomFooter);
             Controls.Add(TopHeader);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FContact";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FContacts";
             WindowState = FormWindowState.Maximized;
-            Load += FContacts_Load;
             TopHeader.ResumeLayout(false);
             TopHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)Booking_img).EndInit();
             ((System.ComponentModel.ISupportInitialize)HeaderLogo_img).EndInit();
             BottomFooter.ResumeLayout(false);
+            BottomFooter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)FooterLogo_img).EndInit();
             Footer_OpeningHours_sctn.ResumeLayout(false);
             Footer_OpeningHours_sctn.PerformLayout();
             Footer_ContactInfo_sctn.ResumeLayout(false);
             Footer_ContactInfo_sctn.PerformLayout();
+            LoginPanel.ResumeLayout(false);
+            LoginPanel.PerformLayout();
             Body_sctn.ResumeLayout(false);
             Body_sctn.PerformLayout();
             BG_img.ResumeLayout(false);
@@ -1044,5 +1133,11 @@
         private PictureBox Email_img;
         private Label Encouragement_lbl;
         private PictureBox GoogleMapsimg;
+        private Label Stafflogin;
+        private Panel panel1;
+        private Panel LoginPanel;
+        private TextBox Passwordtxtb;
+        private TextBox Emailtxtb;
+        private Button Login;
     }
 }
